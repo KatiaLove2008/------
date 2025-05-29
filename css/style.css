@@ -139,3 +139,105 @@ button {
 button:hover {
   background-color: #cc0044;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6e6;
+  color: #800000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 4px solid white;
+}
+
+.cart-link, .back-link {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.girls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.girl-card {
+  background-color: #ffc2d1;
+  border: 2px solid #ff3366;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.girl-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+  color: #cc0033;
+}
+
+button {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #cc0044;
+}
+
+#cart {
+  background-color: #ffe0e9;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 2px dashed #ff3366;
+  border-radius: 10px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

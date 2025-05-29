@@ -20,3 +20,11 @@ function updateCart() {
 
   totalElement.textContent = `Сума: ₴${total}`;
 }
+
+function addToCart(name, price) {
+  const item = { name, price };
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} додано в кошик!`);
+}

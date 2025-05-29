@@ -760,4 +760,11 @@ button.back-button:hover {
   background-color: #ff2e63;
 }
 
+.review-item {
+  background-color: #ffe0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
 

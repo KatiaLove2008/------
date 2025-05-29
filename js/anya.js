@@ -1,37 +1,49 @@
-const reviewsList = document.getElementById('reviews-list');
-const reviewForm = document.getElementById('review-form');
+// anya.js
 
-const friendName = 'anya'; // Встав сюди динамічно ім'я подруги
+// Зберігає новий відгук для Ані у localStorage
+function saveReview() {
+  const name = document.getElementById("reviewer-name").value.trim();
+  const rating = document.getElementById("review-rating").value;
+  const text = document.getElementById("review-text").value.trim();
 
-function loadReviews() {
-  const reviews = JSON.parse(localStorage.getItem(`reviews-${friendName}`)) || [];
-  reviewsList.innerHTML = '';
-  reviews.forEach(r => {
-    const div = document.createElement('div');
-    div.classList.add('review-item');
+  if (!name || !rating || !text) {
+    alert("Будь ласка, заповніть усі поля.");
+    return;
+  }
+
+  const newReview = { name, rating, text };
+  const storageKey = "reviews-anya";
+  const existing = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+  existing.push(newReview);
+  localStorage.setItem(storageKey, JSON.stringify(existing));
+
+  document.getElementById("review-form").reset();
+  displayReviews();
+}
+
+// Показує всі відгуки для Ані
+function displayReviews() {
+  const reviews = JSON.parse(localStorage.getItem("reviews-anya")) || [];
+  const output = document.getElementById("review-output");
+  output.innerHTML = "";
+
+  if (reviews.length === 0) {
+    output.innerHTML = "<p>Ще немає відгуків. Будь першим!</p>";
+    return;
+  }
+
+  reviews.forEach(review => {
+    const div = document.createElement("div");
+    div.classList.add("review-item");
     div.innerHTML = `
-      <strong>${r.name}</strong> — <em>${r.rating} ★</em>
-      <p>${r.text}</p>
+      <strong>${review.name}</strong> — ⭐ ${review.rating}<br/>
+      <em>${review.text}</em>
     `;
-    reviewsList.appendChild(div);
+    output.appendChild(div);
   });
 }
 
-reviewForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const name = document.getElementById('reviewer-name').value.trim();
-  const rating = document.getElementById('review-rating').value;
-  const text = document.getElementById('review-text').value.trim();
+// Завантажує відгуки при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", displayReviews);
 
-  if (!name || !text) return;
-
-  const reviews = JSON.parse(localStorage.getItem(`reviews-${friendName}`)) || [];
-  reviews.push({ name, rating, text });
-  localStorage.setItem(`reviews-${friendName}`, JSON.stringify(reviews));
-
-  reviewForm.reset();
-  loadReviews();
-});
-
-// Завантажуємо відгуки при завантаженні сторінки
-document.addEventListener('DOMContentLoaded', loadReviews);

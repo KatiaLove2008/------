@@ -101,30 +101,28 @@ function addToCart() {
 }
 </script>
 
-<section id="reviews">
-  <h2>Відгуки</h2>
-  <div id="reviews-list"></div>
+<section class="review-section">
+      <h2>Залишити відгук</h2>
+      <form id="review-form" onsubmit="event.preventDefault(); saveReview('anya');">
+        <input type="text" id="reviewer-name" placeholder="Ваше ім'я" required />
+        <select id="review-rating" required>
+          <option value="">Оцінка</option>
+          <option value="5">5 - Чудово</option>
+          <option value="4">4 - Добре</option>
+          <option value="3">3 - Нормально</option>
+          <option value="2">2 - Погано</option>
+          <option value="1">1 - Жахливо</option>
+        </select>
+        <textarea id="review-text" placeholder="Ваш коментар" required></textarea>
+        <button type="submit" class="add-to-cart">Надіслати</button>
+      </form>
+     </section>
 
-  <h3>Залишити свій відгук</h3>
-  <form id="review-form">
-    <label for="reviewer-name">Ім'я:</label>
-    <input type="text" id="reviewer-name" required />
+    <section class="review-list">
+      <h2>Відгуки про Аню</h2>
+      <div id="review-output"></div>
+    </section>
 
-    <label for="review-rating">Оцінка:</label>
-    <select id="review-rating" required>
-      <option value="5">5 зірок</option>
-      <option value="4">4 зірки</option>
-      <option value="3">3 зірки</option>
-      <option value="2">2 зірки</option>
-      <option value="1">1 зірка</option>
-    </select>
-
-    <label for="review-text">Коментар:</label>
-    <textarea id="review-text" rows="4" required></textarea>
-
-    <button type="submit">Відправити</button>
-  </form>
-</section>
 
 <footer>
     <p>Автор: Портницька катерина 😎</p>

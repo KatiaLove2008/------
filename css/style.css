@@ -936,3 +936,99 @@ body.dark-theme .theme-button:hover {
   background-color: #ff83bf;
   box-shadow: 0 6px 10px rgba(255, 95, 168, 0.9);
 }
+
+.nav-emoji {
+  font-size: 25px; /* розмір смайлика */
+  margin-right: 12px;
+  user-select: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffccd9;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(153, 0, 32, 0.3);
+  transition: background-color 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-emoji {
+  font-size: 40px;
+  margin-right: 12px;
+  user-select: none;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #900020;
+}
+
+.nav-menu {
+  list-style: none; /* прибираємо крапки */
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  /* нічого не треба */
+}
+
+.nav-button {
+  background-color: #900020;
+  color: #ffe6eb;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(153, 0, 32, 0.4);
+}
+
+.nav-button:hover {
+  background-color: #ff4d81;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(255, 77, 129, 0.6);
+}
+
+/* Окрема стилізація для кнопки темної теми */
+.theme-button {
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Темна тема */
+body.dark-theme .navbar {
+  background-color: #330014;
+  box-shadow: 0 2px 8px rgba(255, 95, 168, 0.3);
+}
+
+body.dark-theme .site-title {
+  color: #ffb6c1;
+}
+
+body.dark-theme .nav-button {
+  background-color: #ff5fa8;
+  color: #330016;
+  box-shadow: 0 4px 6px rgba(255, 95, 168, 0.7);
+}
+
+body.dark-theme .nav-button:hover {
+  background-color: #ff83bf;
+  box-shadow: 0 6px 10px rgba(255, 95, 168, 0.9);
+}

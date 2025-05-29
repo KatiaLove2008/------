@@ -708,3 +708,56 @@ button.back-button:hover {
   transform: translateY(-100px);
 }
 
+#reviews {
+  margin-top: 40px;
+  border-top: 2px solid #ff5c8d;
+  padding-top: 20px;
+}
+
+.review-item {
+  background: #ffe0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.review-item strong {
+  color: #d6004f;
+}
+
+.review-item em {
+  color: #ff2e63;
+}
+
+#review-form label {
+  display: block;
+  margin-top: 10px;
+  color: #d6004f;
+}
+
+#review-form input,
+#review-form select,
+#review-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ff5c8d;
+}
+
+#review-form button {
+  margin-top: 15px;
+  background-color: #d6004f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#review-form button:hover {
+  background-color: #ff2e63;
+}
+
+

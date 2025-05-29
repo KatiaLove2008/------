@@ -548,3 +548,50 @@ footer {
   }
 }
 
+/* Навігація */
+.navbar {
+  background: linear-gradient(to right, #ff3366, #ff99aa);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 51, 102, 0.2);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffdfe8;
+}
+

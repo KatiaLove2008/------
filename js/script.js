@@ -22,6 +22,13 @@ function updateCart() {
 }
 
 function addToCart(name, price) {
+    const anim = document.getElementById('cart-animation');
+anim.classList.add('active');
+setTimeout(() => {
+  anim.classList.remove('active');
+}, 1000);
+  const audio = new Audio('bell-notification-337658.mp3');
+audio.play();
   const item = { name, price };
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push(item);

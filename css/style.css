@@ -767,4 +767,41 @@ button.back-button:hover {
   border-radius: 10px;
 }
 
+/* style.css */
+
+/* Світла тема (за замовчуванням) */
+body {
+  background-color: #ffe6eb;
+  color: #900020;
+}
+
+/* Темна тема */
+body.dark-theme {
+  background-color: #22000a;
+  color: #ffb6c1;
+}
+
+/* Додатково стилі для елементів у темній темі */
+body.dark-theme header, 
+body.dark-theme footer {
+  background-color: #330014;
+  color: #ffb6c1;
+}
+
+/* Кнопка */
+#theme-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #900020;
+  color: #900020;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme #theme-toggle {
+  border-color: #ffb6c1;
+  color: #ffb6c1;
+}
+
 

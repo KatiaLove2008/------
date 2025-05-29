@@ -107,3 +107,35 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+
+#cart {
+  background-color: #ffe0e9;
+  padding: 20px;
+  margin: 20px;
+  border: 2px dashed #ff3366;
+  border-radius: 10px;
+}
+
+#cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+#cart li {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+button {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #cc0044;
+}

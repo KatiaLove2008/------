@@ -2,6 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Подруги на продаж 💋</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,16 +11,9 @@
   <header>
     <img src="img/meat (1).jpg" alt="Моє фото" class="avatar">
     <h1>Подруги на продаж 💋</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#" onclick="showSection('home')">Головна</a></li>
-        <li><a href="#" onclick="showSection('cart')">Кошик</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Головна -->
     <section id="home-section">
       <div class="girls">
         <div class="girl-card" data-name="Аня">
@@ -27,47 +21,43 @@
           <h2>Аня</h2>
           <p>Весела, екстраверт, любить пити і тренера Тараса.</p>
           <p class="price">₴2000</p>
-          <button class="cart-btn">Додати в кошик</button>
+          <button onclick="addToCart('Аня', 2000)">Додати в кошик</button>
         </div>
         <div class="girl-card" data-name="Богдан">
           <img src="img/bogdan (1).jpg" alt="Богдан">
           <h2>Богдан</h2>
           <p>Любить інформатику, дивний.</p>
           <p class="price">₴900</p>
-          <button class="cart-btn">Додати в кошик</button>
+          <button onclick="addToCart('Богдан', 900)">Додати в кошик</button>
         </div>
         <div class="girl-card" data-name="Іра">
           <img src="img/ira (1).jpg" alt="Іра">
           <h2>Іра</h2>
           <p>Розумна, виховна, не буде сперечатися.</p>
           <p class="price">₴2000</p>
-          <button class="cart-btn">Додати в кошик</button>
+          <button onclick="addToCart('Іра', 2000)">Додати в кошик</button>
         </div>
         <div class="girl-card" data-name="Маргарита">
           <img src="img/margo (1).jpg" alt="Маргарита">
           <h2>Маргарита</h2>
           <p>Фіфа, люкс, може брикатись.</p>
           <p class="price">₴2000</p>
-          <button class="cart-btn">Додати в кошик</button>
+          <button onclick="addToCart('Маргарита', 2000)">Додати в кошик</button>
         </div>
         <div class="girl-card" data-name="Ніка">
           <img src="img/nika (1).jpg" alt="Ніка">
           <h2>Ніка</h2>
           <p>Любить аніме, красуня, може битися.</p>
           <p class="price">₴2000</p>
-          <button class="cart-btn">Додати в кошик</button>
+          <button onclick="addToCart('Ніка', 2000)">Додати в кошик</button>
         </div>
       </div>
     </section>
 
-    <!-- Кошик -->
-    <section id="cart-section" style="display: none;">
+    <section id="cart">
       <h2>🛒 Кошик</h2>
-      <ul id="cart-list">
-        <li>Кошик порожній</li>
-      </ul>
-      <button id="clear-cart">Очистити кошик</button>
-      <button id="checkout-btn" style="display: none;">Оформити замовлення</button>
+      <ul id="cart-items"></ul>
+      <p id="total">Сума: ₴0</p>
     </section>
   </main>
 
@@ -76,55 +66,7 @@
     <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
   </footer>
 
-  <script>
-    const cartItems = [];
-    const checkoutBtn = document.getElementById("checkout-btn");
-
-    function updateCart() {
-      const cartList = document.getElementById("cart-list");
-      cartList.innerHTML = "";
-
-      if (cartItems.length === 0) {
-        cartList.innerHTML = "<li>Кошик порожній</li>";
-        checkoutBtn.style.display = "none";
-      } else {
-        cartItems.forEach(name => {
-          const li = document.createElement("li");
-          li.textContent = name;
-          cartList.appendChild(li);
-        });
-        checkoutBtn.style.display = "inline-block";
-      }
-    }
-
-   document.querySelectorAll(".cart-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-     const name =
- btn.closest(".girl-card").dataset.name;
-    cartItems.push(name);
-    updateCart();
-    alert('${name} додано в кошик!`);
-    });
-});
-
-    document.getElementById("clear-cart").addEventListener("click", () => {
-      cartItems.length = 0;
-      updateCart();
-    });
-
-    checkoutBtn.addEventListener("click", () => {
-      if (cartItems.length > 0) {
-        alert("Замовлення оформлено! 🎉");
-        cartItems.length = 0;
-        updateCart();
-      }
-    });
-
-    function showSection(section) {
-      document.getElementById("home-section").style.display = section === "home" ? "block" : "none";
-      document.getElementById("cart-section").style.display = section === "cart" ? "block" : "none";
-    }
-  </script>
-
+ 
+<script src="js/script.js"></script>
 </body>
 </html>

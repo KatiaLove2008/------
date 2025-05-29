@@ -241,3 +241,11 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: cover;
+}

@@ -767,12 +767,17 @@ button.back-button:hover {
   border-radius: 10px;
 }
 
-/* style.css */
-
 /* Світла тема (за замовчуванням) */
 body {
   background-color: #ffe6eb;
   color: #900020;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer, nav {
+  background-color: #ffccd9;
+  color: #900020;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Темна тема */
@@ -781,9 +786,9 @@ body.dark-theme {
   color: #ffb6c1;
 }
 
-/* Додатково стилі для елементів у темній темі */
-body.dark-theme header, 
-body.dark-theme footer {
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme nav {
   background-color: #330014;
   color: #ffb6c1;
 }
@@ -803,5 +808,3 @@ body.dark-theme #theme-toggle {
   border-color: #ffb6c1;
   color: #ffb6c1;
 }
-
-

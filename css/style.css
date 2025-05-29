@@ -771,40 +771,98 @@ button.back-button:hover {
 body {
   background-color: #ffe6eb;
   color: #900020;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin: 0;
+  padding: 0;
 }
 
 header, footer, nav {
   background-color: #ffccd9;
   color: #900020;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 15px 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a {
+  color: #b30039;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff4d81;
+}
+
+button {
+  background-color: #900020;
+  color: #ffe6eb;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4d81;
+  color: #fff;
+}
+
+/* Карточки подруг */
+.friend-card {
+  background-color: #ffd3df;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(153, 0, 32, 0.2);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  color: #900020;
+}
+
+.friend-card:hover {
+  box-shadow: 0 6px 12px rgba(255, 77, 129, 0.4);
 }
 
 /* Темна тема */
 body.dark-theme {
-  background-color: #22000a;
-  color: #ffb6c1;
+  background-color: #1b0a15;
+  color: #f7c6d0;
 }
 
 body.dark-theme header,
 body.dark-theme footer,
 body.dark-theme nav {
-  background-color: #330014;
-  color: #ffb6c1;
+  background-color: #2d1624;
+  color: #f7c6d0;
 }
 
-/* Кнопка */
-#theme-toggle {
-  cursor: pointer;
-  background: transparent;
-  border: 2px solid #900020;
-  color: #900020;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+body.dark-theme a {
+  color: #ff9ccf;
 }
 
-body.dark-theme #theme-toggle {
-  border-color: #ffb6c1;
-  color: #ffb6c1;
+body.dark-theme a:hover {
+  color: #ff5fa8;
+}
+
+body.dark-theme button {
+  background-color: #ff5fa8;
+  color: #330016;
+  border: 1px solid #f7c6d0;
+}
+
+body.dark-theme button:hover {
+  background-color: #ff83bf;
+  color: #21000f;
+}
+
+/* Темні карточки */
+body.dark-theme .friend-card {
+  background-color: #3b1f30;
+  box-shadow: 0 4px 12px rgba(255, 95, 168, 0.6);
+  color: #f7c6d0;
+}
+
+body.dark-theme .friend-card:hover {
+  box-shadow: 0 6px 16px rgba(255, 95, 168, 0.9);
 }

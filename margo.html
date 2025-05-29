@@ -2,11 +2,12 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Маргарита — Подруга на продаж</title>
+  <title>Аня — Подруги Store</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
+
+ <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">💕 Подруги Store</a>
     <ul class="nav-links">
@@ -20,40 +21,90 @@
     </ul>
   </div>
 </nav>
-  <header>
-    <img src="img/margo (1).jpg" alt="My Photo" class="avatar">
-    <h1>Подруга: Маргарита</h1>
-  </header>
 
-  <main>
-    <section class="girl-details">
-      <img src="img/margo (1).jpg" alt="Маргарита" class="detail-photo">
+<header>
+  <img src="img/margo (1).jpg" alt="Аватар" class="avatar">
+  <h1>Маргарита</h1>
+</header>
+
+<main>
+  <section class="girl-details">
+    <img id="girl-photo" src="img/margo (1).jpg" alt="Маргарита" class="detail-photo">
+
+    <div class="detail-text">
       <h2>Маргарита</h2>
-      <p>Маргарита — фіфа, люкс, може брикатися💕</p>
+
+      <label for="mood-select"><strong>Обери настрій:</strong></label>
+      <select id="mood-select" onchange="updateMood()">
+        <option value="cool">Крута</option>
+        <option value="sweet">Мила</option>
+        <option value="sleepy">Сонлива</option>
+      </select>
+
+      <p id="girl-description">Марго Фіфа, люкс, може брикатись.</p>
       <ul>
-        <li>Вік: 16</li>
-        <li>Хобі: бокс, працює</li>
-        <li>Ціна: 2000</li>
+        <li><strong>Вік:</strong> 16</li>
+        <li><strong>Хобі:</strong> бокс</li>
+        <li><strong>Ціна:</strong> ₴<span id="girl-price">2000</span></li>
       </ul>
 
-      <button class="add-to-cart" onclick="addToCart('Маргарита', 2000)">🛒 Додати в кошик</button>
-        <button class="back-button" onclick="location.href='index.html'">← Назад на головну</button>
-    </section>
-  </main>
+      <button class="add-to-cart" onclick="addToCart()">🛒 Додати в кошик</button>
+      <br><br>
+      <button class="back-button" onclick="location.href='index.html'">Назад на головну</button>
+    </div>
+  </section>
+</main>
 
- <footer>
+<footer>
     <p>Автор: Портницька катерина 😎</p>
     <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
   </footer>
-  
-  <script>
-    function addToCart(name, price) {
-      const item = { name, price };
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      alert(`${name} додано в кошик!`);
-    }
-  </script>
+
+
+<script>
+const moods = {
+  cool: {
+    img: "img/м крута.jpg",
+    desc: "Маргарита нереально крута чувіха",
+    price: 2200,
+    label: "Крута"
+  },
+  sweet: {
+    img: "imgimg/м мила.jpg/і мила.jpg",
+    desc: "Маргарита дуже мила дівчина",
+    price: 3000,
+    label: "Мила"
+  },
+  sleepy: {
+    img: "img/м сонна.jpg",
+    desc: "Маргарита любить поспати тому куняє на гульках",
+    price: 3500,
+    label: "Сонлива"
+  }
+};
+
+function updateMood() {
+  const mood = document.getElementById("mood-select").value;
+  const data = moods[mood];
+  document.getElementById("girl-photo").src = data.img;
+  document.getElementById("girl-description").textContent = data.desc;
+  document.getElementById("girl-price").textContent = data.price;
+}
+
+function addToCart() {
+  const mood = document.getElementById("mood-select").value;
+  const data = moods[mood];
+  const item = {
+    name: `Маргарита (${data.label})`,
+    price: data.price,
+    image: data.img
+  };
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${item.name} додано в кошик за ₴${item.price}`);
+}
+</script>
+
 </body>
 </html>

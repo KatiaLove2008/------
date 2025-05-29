@@ -2,11 +2,12 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Аня — Подруга на продаж</title>
+  <title>Аня — Подруги Store</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
+
+ <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">💕 Подруги Store</a>
     <ul class="nav-links">
@@ -21,39 +22,89 @@
   </div>
 </nav>
 
-  <header>
-    <img src="img/ania (1).jpg" alt="My Photo" class="avatar">
-    <h1>Подруга: Аня</h1>
-  </header>
+<header>
+  <img src="img/ania (1).jpg" alt="Аватар" class="avatar">
+  <h1>Аня</h1>
+</header>
 
-  <main>
-    <section class="girl-details">
-      <img src="img/ania (1).jpg" alt="Аня" class="detail-photo">
+<main>
+  <section class="girl-details">
+    <img id="girl-photo" src="img/ania (1).jpg" alt="Аня" class="detail-photo">
+
+    <div class="detail-text">
       <h2>Аня</h2>
-      <p>Аня — умна, гарна дівчина, екстраверт, має багато друзів, не сварлива😉</p>
-        <li>Вік: 16</li>
-        <li>Хобі: друзі, гульки</li>
-        <li>Ціна: 2000</li>
+
+      <label for="mood-select"><strong>Обери настрій:</strong></label>
+      <select id="mood-select" onchange="updateMood()">
+        <option value="lovely">Закохана</option>
+        <option value="sweet">Мила</option>
+        <option value="pretty">Гарна</option>
+      </select>
+
+      <p id="girl-description">Аня ніжна і турботлива 💖 Гарантує обійми та чай.</p>
+      <ul>
+        <li><strong>Вік:</strong> 16</li>
+        <li><strong>Хобі:</strong> гульки, друзі</li>
+        <li><strong>Ціна:</strong> ₴<span id="girl-price">2000</span></li>
       </ul>
 
-      <button class="add-to-cart" onclick="addToCart('Аня', 2000)">🛒 Додати в кошик</button>
-        <button class="back-button" onclick="location.href='index.html'">← Назад на головну</button>
-    </section>
-  </main>
+      <button class="add-to-cart" onclick="addToCart()">🛒 Додати в кошик</button>
+      <br><br>
+      <button class="back-button" onclick="location.href='index.html'">Назад на головну</button>
+    </div>
+  </section>
+</main>
 
-  <footer>
+<footer>
     <p>Автор: Портницька катерина 😎</p>
     <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
   </footer>
 
-  <script>
-    function addToCart(name, price) {
-      const item = { name, price };
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      alert(`${name} додано в кошик!`);
-    }
-  </script>
+
+<script>
+const moods = {
+  lovely: {
+    img: "img/аня закохана.jpg",
+    desc: "Аня ніжна і турботлива 💖 Гарантує обійми та чай.",
+    price: 2500,
+    label: "Закохана"
+  },
+  sweet: {
+    img: "img/аня мила.jpg",
+    desc: "Аня – дуже мила та кавай няшка 😍",
+    price: 3000,
+    label: "Мила"
+  },
+  pretty: {
+    img: "images/anya-pretty.jpg",
+    desc: "Аня – королева краси 💅 Виглядає на мільйон!",
+    price: 150,
+    label: "Гарна"
+  }
+};
+
+function updateMood() {
+  const mood = document.getElementById("mood-select").value;
+  const data = moods[mood];
+  document.getElementById("girl-photo").src = data.img;
+  document.getElementById("girl-description").textContent = data.desc;
+  document.getElementById("girl-price").textContent = data.price;
+}
+
+function addToCart() {
+  const mood = document.getElementById("mood-select").value;
+  const data = moods[mood];
+  const item = {
+    name: `Аня (${data.label})`,
+    price: data.price,
+    image: data.img
+  };
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${item.name} додано в кошик за ₴${item.price}`);
+}
+</script>
+
 </body>
 </html>

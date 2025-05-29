@@ -1,5 +1,3 @@
-// anya.js
-
 // Зберігає новий відгук для Ані у localStorage
 function saveReview() {
   const name = document.getElementById("reviewer-name").value.trim();
@@ -39,6 +37,7 @@ function displayReviews() {
     div.innerHTML = `
       <strong>${review.name}</strong> — ⭐ ${review.rating}<br/>
       <em>${review.text}</em>
+      <hr />
     `;
     output.appendChild(div);
   });
@@ -46,4 +45,7 @@ function displayReviews() {
 
 // Завантажує відгуки при завантаженні сторінки
 document.addEventListener("DOMContentLoaded", displayReviews);
+
+
+
 

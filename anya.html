@@ -101,27 +101,33 @@ function addToCart() {
 }
 </script>
 
-<section class="review-section">
-      <h2>Залишити відгук</h2>
-      <form id="review-form" onsubmit="event.preventDefault(); saveReview('anya');">
-        <input type="text" id="reviewer-name" placeholder="Ваше ім'я" required />
-        <select id="review-rating" required>
-          <option value="">Оцінка</option>
-          <option value="5">5 - Чудово</option>
-          <option value="4">4 - Добре</option>
-          <option value="3">3 - Нормально</option>
-          <option value="2">2 - Погано</option>
-          <option value="1">1 - Жахливо</option>
-        </select>
-        <textarea id="review-text" placeholder="Ваш коментар" required></textarea>
-        <button type="submit" class="add-to-cart">Надіслати</button>
-      </form>
-     </section>
+<!-- Форма відгуку -->
+  <form id="review-form" onsubmit="event.preventDefault(); saveReview();">
+    <label for="reviewer-name">Ваше ім'я:</label><br />
+    <input type="text" id="reviewer-name" required /><br /><br />
 
-    <section class="review-list">
-      <h2>Відгуки про Аню</h2>
-      <div id="review-output"></div>
-    </section>
+    <label for="review-rating">Оцінка (1-5):</label><br />
+    <select id="review-rating" required>
+      <option value="">Оберіть рейтинг</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br /><br />
+
+    <label for="review-text">Відгук:</label><br />
+    <textarea id="review-text" rows="4" required></textarea><br /><br />
+
+    <button type="submit">Надіслати</button>
+  </form>
+
+  <!-- Контейнер для показу відгуків -->
+  <div id="review-output"></div>
+
+  <script src="js/anya.js"></script>
+</body>
+</html>
 
 
 <footer>

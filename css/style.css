@@ -866,3 +866,73 @@ body.dark-theme .friend-card {
 body.dark-theme .friend-card:hover {
   box-shadow: 0 6px 16px rgba(255, 95, 168, 0.9);
 }
+
+/* Навігація */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffccd9;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(153, 0, 32, 0.3);
+  transition: background-color 0.4s ease;
+}
+
+/* Фото в шапці */
+.nav-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #900020;
+}
+
+/* Назва сайту */
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #900020;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Кнопка темної теми */
+.theme-button {
+  background: #900020;
+  border: none;
+  border-radius: 25px;
+  width: 44px;
+  height: 44px;
+  color: #ffe6eb;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(153, 0, 32, 0.4);
+}
+
+.theme-button:hover {
+  background-color: #ff4d81;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(255, 77, 129, 0.6);
+}
+
+/* Темна тема для навігації */
+body.dark-theme .navbar {
+  background-color: #330014;
+  box-shadow: 0 2px 8px rgba(255, 95, 168, 0.3);
+}
+
+body.dark-theme .site-title {
+  color: #ffb6c1;
+}
+
+body.dark-theme .theme-button {
+  background-color: #ff5fa8;
+  color: #330016;
+  box-shadow: 0 4px 6px rgba(255, 95, 168, 0.7);
+}
+
+body.dark-theme .theme-button:hover {
+  background-color: #ff83bf;
+  box-shadow: 0 6px 10px rgba(255, 95, 168, 0.9);
+}

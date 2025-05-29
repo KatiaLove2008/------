@@ -128,6 +128,32 @@ function addToCart() {
 }
 </script>
 
+<!-- Форма відгуку -->
+  <form id="review-form" onsubmit="event.preventDefault(); saveReview();">
+    <label for="reviewer-name">Ваше ім'я:</label><br />
+    <input type="text" id="reviewer-name" required /><br /><br />
+
+    <label for="review-rating">Оцінка (1-5):</label><br />
+    <select id="review-rating" required>
+      <option value="">Оберіть рейтинг</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br /><br />
+
+    <label for="review-text">Відгук:</label><br />
+    <textarea id="review-text" rows="4" required></textarea><br /><br />
+
+    <button type="submit">Надіслати</button>
+  </form>
+
+  <!-- Контейнер для показу відгуків -->
+  <div id="review-output"></div>
+
+  <script src="js/bogdan.js"></script>
+
 
 <footer>
     <p>Автор: Портницька катерина 😎</p>

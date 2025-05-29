@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Богдан — Подруга на продаж</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/bogdan (1).jpg" alt="My Photo" class="avatar">
+    <h1>Подруга: Богдан</h1>
+  </header>
+
+  <main>
+    <section class="girl-details">
+      <img src="img/bogdan (1).jpg" alt="Богдан" class="detail-photo">
+      <h2>Богдан</h2>
+      <p>Богдан — любить інформатику, дивний🍋</p>
+      <ul>
+        <li>Вік: 16</li>
+        <li>Хобі: комп'ютери, техніка</li>
+        <li>Ціна: 900</li>
+      </ul>
+
+      <button class="add-to-cart" onclick="addToCart('Богдан', 900)">🛒 Додати в кошик</button>
+      <a href="index.html">← Назад на головну</a>
+    </section>
+  </main>
+
+ <footer>
+    <p>Автор: Портницька катерина 😎</p>
+    <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
+  </footer>
+  
+  <script>
+    function addToCart(name, price) {
+      const item = { name, price };
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${name} додано в кошик!`);
+    }
+  </script>
+</body>
+</html>

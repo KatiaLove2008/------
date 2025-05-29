@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Маргарита — Подруга на продаж</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/margo (1).jpg" alt="My Photo" class="avatar">
+    <h1>Подруга: Маргарита</h1>
+  </header>
+
+  <main>
+    <section class="girl-details">
+      <img src="img/margo (1).jpg" alt="Маргарита" class="detail-photo">
+      <h2>Маргарита</h2>
+      <p>Маргарита — фіфа, люкс, може брикатися💕</p>
+      <ul>
+        <li>Вік: 16</li>
+        <li>Хобі: бокс, працює</li>
+        <li>Ціна: 2000</li>
+      </ul>
+
+      <button class="add-to-cart" onclick="addToCart('Маргарита', 2000)">🛒 Додати в кошик</button>
+      <a href="index.html">← Назад на головну</a>
+    </section>
+  </main>
+
+ <footer>
+    <p>Автор: Портницька катерина 😎</p>
+    <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
+  </footer>
+  
+  <script>
+    function addToCart(name, price) {
+      const item = { name, price };
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${name} додано в кошик!`);
+    }
+  </script>
+</body>
+</html>

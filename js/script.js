@@ -36,29 +36,3 @@ audio.play();
   alert(`${name} додано в кошик!`);
 }
 
-// theme-toggle.js
-
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-
-// Завантажити попередній вибір теми з localStorage
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  body.classList.add("dark-theme");
-  toggleBtn.textContent = "Світла тема";
-}
-
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-theme");
-
-  if (body.classList.contains("dark-theme")) {
-    toggleBtn.textContent = "Світла тема";
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleBtn.textContent = "Темна тема";
-    localStorage.setItem("theme", "light");
-  }
-});
-
-
-

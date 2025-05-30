@@ -46,4 +46,24 @@ function displayReviews() {
 // Завантажує відгуки при завантаженні сторінки
 document.addEventListener("DOMContentLoaded", displayReviews);
 
+// Завантажує відгуки при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", displayReviews);
 
+function bookDate(name) {
+  const dateInput = document.getElementById('booking-date');
+  const message = document.getElementById('booking-message');
+  const date = dateInput.value;
+
+  if (!date) {
+    message.textContent = "Будь ласка, оберіть дату 🙈";
+    return;
+  }
+
+  const bookingData = {
+    name: name,
+    date: date
+  };
+
+  localStorage.setItem('booking-' + name, JSON.stringify(bookingData));
+  message.textContent = `✅ Ви забронювали ${name} на ${date}`;
+}

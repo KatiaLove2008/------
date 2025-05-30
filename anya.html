@@ -8,7 +8,7 @@
 <body>
 
  <nav class="navbar">
-  <div class="logo">
+  <div class="navbar-left">
    <div class="nav-emoji" aria-label="Емодзі">💕</div> 
    <span class="site-title">Продаю Подруг</span>
   </div>
@@ -24,6 +24,7 @@
       <li><a href="ira.html">Іра</a></li>
       <li><a href="cart.html">Корзина</a></li>
       <li><a href="reviews.html">Відгуки</a></li>
+      <li><a href="chatbot.html">Чат з подругою</a></li>
     </ul>
   </div>
 </nav>
@@ -135,13 +136,23 @@ function addToCart() {
 </html>
 
 
+
+
+<section class="booking">
+  <h3>📅 Забронювати побачення</h3>
+  <label for="booking-date">Оберіть дату:</label>
+  <input type="date" id="booking-date" />
+
+  <button onclick="bookDate('Аня')">Забронювати</button>
+  <p id="booking-message"></p>
+</section>
+
 <footer>
     <p>Автор: Портницька катерина 😎</p>
     <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
   </footer>
 
 <script src="js/theme-toggle.js"></script>
-
 
 </body>
 </html>

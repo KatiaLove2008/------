@@ -12,11 +12,6 @@
     <div class="nav-emoji" aria-label="Емодзі">💕</div>
     <span class="site-title">Продаю Подруг</span>
   </div>
-  <div class="burger" onclick="toggleMenu()">☰</div> <!-- <- це бургер -->
-  <ul class="nav-menu">
-  <button id="theme-toggle" class="theme-button" aria-label="Перемикач теми">
-    🌙
-  </button>
   <ul class="nav-menu">
       <li><a href="index.html">Головна</a></li>
       <li><a href="anya.html">Аня</a></li>
@@ -26,7 +21,8 @@
       <li><a href="ira.html">Іра</a></li>
       <li><a href="cart.html">Корзина</a></li>
       <li><a href="reviews.html">Відгуки</a></li>
-      <li><a href="about.html" class="nav-button">Про сайт</a></li>
+      <li><a href="chatbot.html">Чат з подругою</a></li> 
+      <li><button id="theme-toggle" class="nav-button theme-button">🌙</button></li>
     </ul>
   </div>
 </nav>
@@ -35,6 +31,13 @@
     <h1>Подруги на продаж 💋</h1>
     <a href="cart.html" class="cart-link">Перейти в кошик 🛒</a>
   </header>
+
+<section id="featured-friend" class="featured">
+  <h2>🌟 Подруга дня 🌟</h2>
+  <div id="friend-of-day" class="friend-card"></div>
+</section>
+
+<script src="js/friend-of-day.js"></script>
 
   <main>
     <section id="home-section">
@@ -76,17 +79,16 @@
         </div>
       </div>
     </section>
-
   
   <footer>
     <p>Автор: Портницька катерина 😎</p>
     <p>Instagram: @vredjnkq | Email: katia.portnitska@gmail.com</p>
   </footer>
 
+
  
 <script src="js/script.js"></script>
 <div id="cart-animation" class="cart-float">💖</div>
 <script src="js/theme-toggle.js"></script>
-<script src="js/burger.js"></script>
 </body>
 </html>

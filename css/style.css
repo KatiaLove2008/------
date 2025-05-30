@@ -1089,3 +1089,92 @@ body.dark-theme .about-section {
     background: #330016;
   }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc4d6;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-emoji {
+  font-size: 28px;
+}
+
+.site-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #900020;
+}
+
+.burger {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+  color: #900020;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+
+.nav-button {
+  background: #ff8fab;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-button:hover {
+  background: #ff5c8a;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background: #ffe6eb;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+body.dark-theme .navbar {
+  background-color: #330016;
+}
+
+body.dark-theme .nav-button {
+  background: #660033;
+}
+
+body.dark-theme .nav-button:hover {
+  background: #99004d;
+}
+

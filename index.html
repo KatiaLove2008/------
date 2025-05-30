@@ -8,10 +8,12 @@
 </head>
 <body>
 <nav class="navbar">
-  <div class="logo">
+  <div class="navbar-left">
     <div class="nav-emoji" aria-label="Емодзі">💕</div>
     <span class="site-title">Продаю Подруг</span>
   </div>
+  <div class="burger" onclick="toggleMenu()">☰</div> <!-- <- це бургер -->
+  <ul class="nav-menu">
   <button id="theme-toggle" class="theme-button" aria-label="Перемикач теми">
     🌙
   </button>
@@ -24,6 +26,7 @@
       <li><a href="ira.html">Іра</a></li>
       <li><a href="cart.html">Корзина</a></li>
       <li><a href="reviews.html">Відгуки</a></li>
+      <li><a href="about.html" class="nav-button">Про сайт</a></li>
     </ul>
   </div>
 </nav>
@@ -84,5 +87,6 @@
 <script src="js/script.js"></script>
 <div id="cart-animation" class="cart-float">💖</div>
 <script src="js/theme-toggle.js"></script>
+<script src="js/burger.js"></script>
 </body>
 </html>

@@ -1490,3 +1490,70 @@ button#send-gift-btn:hover {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.creative-list {
+  list-style: none;
+  padding: 0;
+}
+
+.creative-list li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.creative-list a {
+  text-decoration: none;
+  color: #ff3399;
+  transition: 0.3s;
+}
+
+.creative-list a:hover {
+  color: #cc0066;
+  text-decoration: underline;
+}
+
+body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffafc;
+    }
+    .navbar {
+      background-color: #ffccdd;
+      padding: 1rem;
+      text-align: center;
+    }
+    .navbar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .canvas-container {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    canvas {
+      border: 2px solid #ff66cc;
+      touch-action: none;
+      background-color: #fff;
+    }
+    .tools {
+      margin: 1rem 0;
+    }
+    .tools input[type="color"],
+    .tools input[type="range"],
+    .tools button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+    .back-button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #ffcce6;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }

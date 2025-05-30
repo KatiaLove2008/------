@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Творча стіна</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+  <nav class="navbar">
+    <a href="game.html">← Повернутись на творчу сторінку</a>
+  </nav>
+
+  <main class="canvas-container">
+    <h1>🎨 Малюй на творчій стіні</h1>
+    <div class="tools">
+      <input type="color" id="colorPicker" value="#ff3399">
+      <input type="range" id="brushSize" min="1" max="30" value="5">
+      <button id="clearBtn">Очистити</button>
+    </div>
+    <canvas id="drawingCanvas" width="360" height="500"></canvas>
+  </main>
+  
+</body>
+</html>

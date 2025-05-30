@@ -2,10 +2,9 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Творча стіна</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Творча стіна з галереєю</title>
   <link rel="stylesheet" href="css/style.css" />
-  
 </head>
 <body>
   <nav class="navbar">
@@ -15,12 +14,19 @@
   <main class="canvas-container">
     <h1>🎨 Малюй на творчій стіні</h1>
     <div class="tools">
-      <input type="color" id="colorPicker" value="#ff3399">
-      <input type="range" id="brushSize" min="1" max="30" value="5">
+      <input type="color" id="colorPicker" value="#ff3399" />
+      <input type="range" id="brushSize" min="1" max="30" value="5" />
       <button id="clearBtn">Очистити</button>
+      <button id="saveBtn">Зберегти малюнок</button>
     </div>
     <canvas id="drawingCanvas" width="360" height="500"></canvas>
+
+    <section class="gallery" id="gallery">
+      <h2>Галерея твоїх малюнків</h2>
+    </section>
   </main>
-  
+
+  <script src="js/art.js"></script>
 </body>
 </html>
+

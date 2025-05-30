@@ -1557,3 +1557,58 @@ body {
       color: #333;
       font-weight: bold;
     }
+
+    body {
+  font-family: sans-serif;
+  background-color: #fffafc;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #ffccdd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.canvas-container {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+canvas {
+  border: 2px solid #ff66cc;
+  background-color: white;
+  touch-action: none;
+}
+
+.tools {
+  margin: 1rem 0;
+}
+
+.tools input,
+.tools button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.gallery {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #ff66cc;
+  border-radius: 10px;
+}

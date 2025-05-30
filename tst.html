@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Тест: Яка ти подруга?</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+  <div class="navbar-left">
+   <div class="nav-emoji" aria-label="Емодзі">💕</div> 
+   <span class="site-title">Продаю Подруг</span>
+  </div>
+  <button id="theme-toggle" class="theme-button" aria-label="Перемикач теми">
+    🌙
+  </button>
+  <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="anya.html">Аня</a></li>
+      <li><a href="bogdan.html">Богдан</a></li>
+      <li><a href="margo.html">Маргарита</a></li>
+      <li><a href="nika.html">Ніка</a></li>
+      <li><a href="ira.html">Іра</a></li>
+      <li><a href="cart.html">Корзина</a></li>
+      <li><a href="reviews.html">Відгуки</a></li>
+      <li><a href="chatbot.html">Чат з подругою</a></li>
+      <li><a href="map.html">Карта Подруг</a></li>
+       <li><a href="tst.html">Тест</a></li>
+    </ul>
+  </div>
+</nav>
+  </header>
+
+  <main class="test-container">
+    <h1>Яка ти подруга?</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>1. Що ти робиш у вільний час?</p>
+        <label><input type="radio" name="q1" value="anya" required> Дивлюсь фільми</label><br>
+        <label><input type="radio" name="q1" value="nika"> Малюю або читаю</label><br>
+        <label><input type="radio" name="q1" value="bogdana"> Йду на пригоди!</label><br>
+      </div>
+
+      <div class="question">
+        <p>2. Твій улюблений колір?</p>
+        <label><input type="radio" name="q2" value="margarita" required> Рожевий</label><br>
+        <label><input type="radio" name="q2" value="ira"> Блакитний</label><br>
+        <label><input type="radio" name="q2" value="anya"> Сірий або білий</label><br>
+      </div>
+
+      <div class="question">
+      <p>3. Де мрієш побувати?</p>
+      <label><input type="radio" name="q3" value="margo"> Париж</label><br>
+      <label><input type="radio" name="q3" value="nika"> Японія</label><br>
+      <label><input type="radio" name="q3" value="bogdana"> Африка або Гори</label>
+    </div>
+
+    <div class="question">
+      <p>4. Улюблений жанр музики?</p>
+      <label><input type="radio" name="q4" value="ira"> Лірична/поп</label><br>
+      <label><input type="radio" name="q4" value="nika"> Рок або експериментальна</label><br>
+      <label><input type="radio" name="q4" value="anya"> Весела танцювальна</label>
+    </div>
+
+    <div class="question">
+      <p>5. Як ти зазвичай допомагаєш подрузі?</p>
+      <label><input type="radio" name="q5" value="ira"> Слухаю та підтримую</label><br>
+      <label><input type="radio" name="q5" value="anya"> Жартую, щоб розвеселити</label><br>
+      <label><input type="radio" name="q5" value="bogdana"> Пропоную пригоди і вихід із ситуації</label>
+    </div>
+
+      <button type="submit">Дізнатися!</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

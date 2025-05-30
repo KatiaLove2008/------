@@ -1,25 +1,3 @@
-const chatWindow = document.getElementById('chat-window');
-const chatInput = document.getElementById('chat-input');
-const sendBtn = document.getElementById('send-btn');
-
-const botReplies = {
-  "привіт": "Привіт! Як ся маєш? 😊",
-  "як справи": "В мене все супер! Дякую, що питаєш 😉",
-  "ти красива": "Ой, дякую! Ти теж красуня 😘",
-  "хочу подругу": "Ти вже знайшов чудову подругу на сайті! 💖",
-  "дякую": "Будь ласка! Звертайся ще 😊",
-  "пока": "До зустрічі! 👋",
-  "default": "Вибач, я не розумію, але хочу дружити! 😄"
-};
-
-function addMessage(text, className) {
-  const msg = document.createElement('div');
-  msg.textContent = text;
-  msg.className = 'message ' + className;
-  chatWindow.appendChild(msg);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("chat-form");
   const input = document.getElementById("user-input");
@@ -34,22 +12,45 @@ document.addEventListener("DOMContentLoaded", () => {
     ira: ["Привіт, я Іра 🤍", "Я можу вислухати тебе завжди", "Давай мріяти разом 🦋"]
   };
 
+  let currentFriend = select.value;
+
+  function loadChat(friend) {
+    const saved = localStorage.getItem("chat_" + friend);
+    if (saved) {
+      chatBox.innerHTML = saved;
+      chatBox.scrollTop = chatBox.scrollHeight;
+    } else {
+      chatBox.innerHTML = "";
+    }
+  }
+
+  function saveChat(friend) {
+    localStorage.setItem("chat_" + friend, chatBox.innerHTML);
+  }
+
+  select.addEventListener("change", () => {
+    saveChat(currentFriend);
+    currentFriend = select.value;
+    loadChat(currentFriend);
+  });
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const userText = input.value.trim();
-    const friend = select.value;
-
     if (userText === "") return;
 
-    // Відображення повідомлення користувача
     chatBox.innerHTML += `<div class="user-msg">Ти: ${userText}</div>`;
 
-    // Відповідь подруги
-    const replyList = responses[friend];
+    const replyList = responses[currentFriend];
     const botReply = replyList[Math.floor(Math.random() * replyList.length)];
     chatBox.innerHTML += `<div class="bot-msg">${botReply}</div>`;
 
-    input.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
+    input.value = "";
+    saveChat(currentFriend);
   });
+
+  loadChat(currentFriend);
 });
+
+

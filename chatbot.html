@@ -2,31 +2,30 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Поради від подруги</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Чат з подругою</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
-  <div class="navbar-left">
-    <div class="nav-emoji" aria-label="Емодзі">💕</div>
-    <span class="site-title">Продаю Подруг</span>
-  </div>
-  <ul class="nav-menu">
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="anya.html">Аня</a></li>
-      <li><a href="bogdan.html">Богдан</a></li>
-      <li><a href="margo.html">Маргарита</a></li>
-      <li><a href="nika.html">Ніка</a></li>
-      <li><a href="ira.html">Іра</a></li>
-      <li><a href="cart.html">Корзина</a></li>
-      <li><a href="reviews.html">Відгуки</a></li>
-      <li><a href="chatbot.html">Чат з подругою</a></li>
-      <li><button id="theme-toggle" class="nav-button theme-button">🌙</button></li>
-    </ul>
-  </div>
-</nav>
+      <div class="navbar-left">
+        <div class="nav-emoji">💕</div>
+        <span class="site-title">Продаю Подруг</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="anya.html">Аня</a></li>
+        <li><a href="bogdan.html">Богдан</a></li>
+        <li><a href="margo.html">Маргарита</a></li>
+        <li><a href="nika.html">Ніка</a></li>
+        <li><a href="ira.html">Іра</a></li>
+        <li><a href="cart.html">Кошик</a></li>
+        <li><a href="reviews.html">Відгуки</a></li>
+        <li><a href="chatbot.html" class="active">Чат з подругою</a></li>
+        <li><button id="theme-toggle" class="nav-button theme-button">🌙</button></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="chat-container">
@@ -39,7 +38,7 @@
       <option value="ira">Іра</option>
     </select>
 
-    <div class="chat-box" id="chat-box"></div>
+    <div id="chat-box" class="chat-box"></div>
 
     <form id="chat-form">
       <input type="text" id="user-input" placeholder="Напиши щось..." required />
@@ -47,6 +46,6 @@
     </form>
   </main>
 
-  <script src="chatbot.js"></script>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>

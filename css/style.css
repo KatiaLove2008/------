@@ -1176,3 +1176,132 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.chat-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.user-msg {
+  text-align: right;
+  margin: 5px 0;
+  color: #222;
+}
+
+.bot-msg {
+  text-align: left;
+  margin: 5px 0;
+  color: #555;
+}
+
+form#chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+/* Стиль контейнера чату */
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  min-height: 250px;
+  max-height: 350px;
+  overflow-y: auto;
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Повідомлення користувача */
+.user-msg {
+  max-width: 70%;
+  margin: 10px 0 10px auto;
+  padding: 10px 15px;
+  background: #4CAF50; /* зелений */
+  color: white;
+  border-radius: 20px 20px 0 20px;
+  box-shadow: 0 2px 5px rgba(76,175,80,0.4);
+  word-wrap: break-word;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Повідомлення бота */
+.bot-msg {
+  max-width: 70%;
+  margin: 10px auto 10px 0;
+  padding: 10px 15px;
+  background: #E0E0E0; /* світло-сірий */
+  color: #333;
+  border-radius: 20px 20px 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  word-wrap: break-word;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.secret-gift-container {
+  position: relative;
+  text-align: center;
+  margin: 30px auto;
+}
+
+#secret-gift-btn {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#secret-gift-btn:hover {
+  background: #ff85c1;
+}
+
+.gift-message {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff1493;
+  user-select: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}

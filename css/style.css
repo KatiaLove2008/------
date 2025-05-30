@@ -1375,3 +1375,118 @@ button:hover {
   margin-top: 20px;
   color: #99004d;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8fb;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffb3c6;
+  padding: 10px 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-emoji {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a, .nav-menu button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gift-section {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffe4ec;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.gift-section h3 {
+  margin-bottom: 15px;
+  color: #b3003b;
+}
+
+label, select, button {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+select, button {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button#send-gift-btn {
+  background-color: #d6336c;
+  color: white;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button#send-gift-btn:hover {
+  background-color: #a0284f;
+}
+
+#gift-output {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #800040;
+  min-height: 24px;
+}
+
+#gift-output.show {
+  opacity: 1;
+}
+
+#gift-history {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  border-top: 1px solid #d6336c;
+}
+
+#gift-history li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #d6336c;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

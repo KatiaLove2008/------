@@ -2,8 +2,8 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Чат з подругою</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Колекція подарунків</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -31,24 +31,34 @@
     </nav>
   </header>
 
-  <main class="chat-container">
-    <label for="friend-select">Обери подругу:</label>
-    <select id="friend-select">
-      <option value="anya">Аня</option>
-      <option value="bogdana">Богдана</option>
-      <option value="margarita">Маргарита</option>
-      <option value="nika">Ніка</option>
-      <option value="ira">Іра</option>
-    </select>
+  <main>
+    <section class="gift-section">
+      <h3>Подаруй подрузі подарунок 🎁</h3>
+      <label for="friend-select">Обери подругу:</label>
+      <select id="friend-select">
+        <option value="anya">Аня</option>
+        <option value="bogdana">Богдана</option>
+        <option value="margarita">Маргарита</option>
+        <option value="nika">Ніка</option>
+        <option value="ira">Іра</option>
+      </select>
 
-    <div id="chat-box" class="chat-box"></div>
+      <label for="gift-select">Обери подарунок:</label>
+      <select id="gift-select">
+        <option value="flowers">💐 Квіти</option>
+        <option value="chocolate">🍫 Шоколад</option>
+        <option value="meme">😂 Мем</option>
+      </select>
 
-    <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Напиши щось..." required />
-      <button type="submit">Надіслати</button>
-    </form>
+      <button id="send-gift-btn">Подарувати</button>
+
+      <div id="gift-output"></div>
+
+      <h4>Історія подарунків:</h4>
+      <ul id="gift-history"></ul>
+    </section>
   </main>
 
-  <script src="js/chatbot.js"></script>
+  <script src="js/gift.js"></script>
 </body>
 </html>

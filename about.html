@@ -1,0 +1,46 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про сайт</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="light-theme">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="nav-emoji">💕</div>
+      <span class="site-title">Продаю Подруг</span>
+    </div>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-button">Головна</a></li>
+      <li><a href="cart.html" class="nav-button">Кошик</a></li>
+      <li><a href="reviews.html" class="nav-button">Відгуки</a></li>
+      <li><a href="about.html" class="nav-button">Про сайт</a></li>
+      <li><button id="theme-toggle" class="nav-button theme-button">🌙</button></li>
+    </ul>
+  </nav>
+
+  <main class="about-section">
+    <h1>Про сайт 💖</h1>
+    <p>
+      Це жартівливий сайт, створений у навчальних цілях. Тут ти можеш
+      "придбати" віртуальних подруг різного настрою 😊, оцінити їхній профіль,
+      залишити відгук і попрактикувати HTML, CSS та JavaScript.
+    </p>
+    <p>
+      Автор: Портницька Катерина 💅 <br />
+      Проєкт створено з любов’ю та креативом ✨
+    </p>
+  </main>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-menu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

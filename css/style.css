@@ -1032,3 +1032,60 @@ body.dark-theme .nav-button:hover {
   background-color: #ff83bf;
   box-shadow: 0 6px 10px rgba(255, 95, 168, 0.9);
 }
+
+/* Про автора */
+.about-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  color: #900020;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body.dark-theme .about-section {
+  color: #ffe0ea;
+}
+
+/* Бургер */
+.burger {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+  color: #900020;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background: #ffe6eb;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-button {
+    margin: 5px 0;
+  }
+
+  body.dark-theme .nav-menu {
+    background: #330016;
+  }
+}

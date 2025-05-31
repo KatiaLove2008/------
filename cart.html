@@ -7,16 +7,22 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="navbar">
+ <nav class="navbar">
   <div class="navbar-left">
-    <div class="nav-emoji" aria-label="Емодзі">💕</div>
+    <div class="nav-emoji">💕</div>
     <span class="site-title">Продаю Подруг</span>
   </div>
-  <button id="theme-toggle" class="theme-button" aria-label="Перемикач теми">
-    🌙
-  </button>
+  
+ <button id="burger-btn" class="burger-btn" aria-label="Відкрити меню">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  
+  <!-- Класична навігація для ПК -->
   <ul class="nav-menu">
-    >
+    <li><a href="index.html">Головна</a></li>
       <li><a href="anya.html">Аня</a></li>
       <li><a href="bogdan.html">Богдан</a></li>
       <li><a href="margo.html">Маргарита</a></li>
@@ -29,9 +35,31 @@
        <li><a href="tst.html">Тест</a></li>
        <li><a href="gift.html">Подарунки</a></li>
        <li><a href="game.html">🌟 Творча сторона</a></li>
-    </ul>
-  </div>
+       <li><button id="theme-toggle-2" class="nav-button theme-button">🌙</button></li>
+  </ul>
+  </ul>
 </nav>
+
+<!-- Бокове меню, спочатку сховане -->
+<div id="side-menu" class="side-menu">
+  <button id="close-btn" class="close-btn" aria-label="Закрити меню">&times;</button>
+  <ul>
+   <li><a href="index.html">Головна</a></li>
+      <li><a href="anya.html">Аня</a></li>
+      <li><a href="bogdan.html">Богдан</a></li>
+      <li><a href="margo.html">Маргарита</a></li>
+      <li><a href="nika.html">Ніка</a></li>
+      <li><a href="ira.html">Іра</a></li>
+      <li><a href="cart.html">Корзина</a></li>
+      <li><a href="reviews.html">Відгуки</a></li>
+      <li><a href="chatbot.html">Чат з подругою</a></li>
+      <li><a href="map.html">Карта Подруг</a></li>
+       <li><a href="tst.html">Тест</a></li>
+       <li><a href="gift.html">Подарунки</a></li>
+       <li><a href="game.html">🌟 Творча сторона</a></li>
+    <li><button id="theme-toggle-2" class="nav-button theme-button">🌙</button></li>
+  </ul>
+</div>
   <header>
     <h1>🛒 Мій Кошик</h1>
     <a href="index.html" class="back-link">← Назад на головну</a>
@@ -54,5 +82,6 @@
 
   <script src="js/cart.js"></script>
   <script src="js/theme-toggle.js"></script>
+  <script src="js/burger.js"></script>
 </body>
 </html>

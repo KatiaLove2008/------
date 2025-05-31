@@ -570,7 +570,7 @@ footer {
 
 .nav-logo {
   font-family: 'Playfair Display', serif;
-  color: white;
+  color: rgb(250, 247, 247);
   font-size: 1.8em;
   text-decoration: none;
 }
@@ -585,15 +585,35 @@ footer {
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: rgb(249, 246, 246);
   font-weight: bold;
   font-size: 1em;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #ffdfe8;
+  color: #f6e5e9;
 }
+
+.navbar {
+  background-color: #ffccdd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #1f1f1f; /* темніший текст завжди */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #000; /* ще темніше при наведенні (опціонально) */
+}
+
+
 
 /* Стилі для вибору емоцій */
 #girl-photo {
@@ -1611,4 +1631,102 @@ canvas {
   margin-bottom: 1rem;
   border: 1px solid #ff66cc;
   border-radius: 10px;
+}
+
+/* Бургер-кнопка — схована на ПК, показується на мобілках */
+#burger-btn {
+display: none;
+}
+
+@media (max-width: 768px) {
+#burger-btn {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 22px;
+background: none;
+border: none;
+cursor: pointer;
+margin-left: auto;
+padding: 0;
+z-index: 1001;
+}
+
+#burger-btn span {
+display: block;
+height: 3px;
+width: 100%;
+background-color: #d6336c; /* Можна змінити під тему */
+border-radius: 2px;
+transition: all 0.3s ease;
+}
+
+.nav-menu {
+display: none;
+}
+}
+
+/* Сайд-меню */
+.side-menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 60%;
+max-width: 350px;
+height: 100%;
+background-color: #fff;
+box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+padding: 30px;
+transition: right 0.3s ease-in-out;
+z-index: 1000;
+overflow-y: auto;
+}
+
+.side-menu.open {
+right: 0;
+}
+
+.side-menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.side-menu li {
+margin-bottom: 20px;
+}
+
+.side-menu a,
+.side-menu button {
+text-decoration: none;
+color: #333;
+font-size: 18px;
+display: block;
+background: none;
+border: none;
+text-align: left;
+cursor: pointer;
+}
+
+.side-menu a:hover,
+.side-menu button:hover {
+color: #d6336c;
+}
+
+.close-btn {
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #d6336c;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
 }
